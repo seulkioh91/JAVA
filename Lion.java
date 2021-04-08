@@ -1,5 +1,8 @@
-public class Lion extends Animal implements Predator {
-    public String getFood() {
+public class Lion extends Predator implements Barkable {
+    public String getFood(){
         return "banana";
+    }
+    public void bark(){
+        System.out.println("grrr");
     }
 }

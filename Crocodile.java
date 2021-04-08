@@ -1,5 +1,8 @@
-public class Crocodile extends Animal implements Predator {
-    public String getFood() {
-        return "orange";
+public class Crocodile extends Predator implements Barkable {
+    public String getFood(){
+        return "strawberry";
+    }
+    public void bark(){
+        System.out.println("yummy");
     }
 }
