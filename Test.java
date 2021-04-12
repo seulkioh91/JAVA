@@ -1,20 +1,17 @@
-import java.util.Scanner;
-
 public class Test {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int input = sc.nextInt();
+    public void shouldBeRun() {
+        System.out.println("ok thanks.");
+    }
 
-        switch(input){
-            case 1 :
-                System.out.println("오세훈");
-                 break;
-            case 2 :
-                System.out.println("박영선");
-                 break;
-            case 3 :
-                System.out.println("허경영");
-                 break;
+    public static void main(String[] args) {
+        Test test = new Test();
+        int c;
+        try {
+            c = 4 / 0;
+        } catch (ArithmeticException e) {
+            c = -1;
+        } finally {
+            test.shouldBeRun();
         }
     }
 }
