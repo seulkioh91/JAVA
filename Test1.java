@@ -1,18 +1,22 @@
-public class Test1 {
-    public void sayNick(String nick) throws FoolException {
-        if("fool".equals(nick)) {
-            throw new FoolException();
-        }
-        System.out.println("당신의 별명은 "+nick+" 입니다.");
-    }
+import java.util.Scanner;
 
-    public static void main(String[] args){
-        Test1 test = new Test1();
-        try{
-            test.sayNick("fool");
-            test.sayNick("genious");
-        }catch(FoolException e) {
-            System.err.println("FoolException이 발생했습니다.");
-        }
+public class Test1 {
+    public static void  main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int retry;
+do {
+    System.out.print("정수값:   ");
+    int x = sc.nextInt();
+
+        if (x < 0){
+            System.out.println("이 값은 음수입니다.");
+        }else if (x==0) {
+            System.out.println("이 값은 0입니다.");
+        }else{
+            System.out.println("이 값은 양수입니다.");
     }
+    System.out.print("다시 한번? 1-Yes / 0-No:");
+    retry = sc.nextInt();
+} while (retry==1);
+}
 }
