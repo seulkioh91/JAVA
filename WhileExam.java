@@ -1,13 +1,12 @@
-public class WhileExam {
-    public static void main(String[] args){
-        int total = 0;
-        int i = 1;
-
-        while(i<=100){
-            total = total+i;
-            i++;
+public class whileexam {
+    public static void main(String[] args) {
+        int treeHit = 0;
+        while (treeHit <10) {
+            treeHit++;
+            System.out.println("나무를 " + treeHit + "번 찍었습니다.");
+            if (treeHit == 10) {
+                System.out.println("나무 넘어갑니다.");
+            }
         }
-        System.out.println(total);
-    }
-    
+}
 }
